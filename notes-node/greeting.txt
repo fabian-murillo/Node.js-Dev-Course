@@ -1,5 +1,3 @@
-/* This file was actually created using the appendFile file method
-   with the 'fs' module, in the app.js file!...I addded this note */
-
-// We've now appended the os system's username utilizing the 'os' module:
-Hello world!Hello fabianmurillo!
+// We've used module.exports in our notes.js file, to make the data we've appended
+// here, available to the app.js file, through our require function:
+Hello world!Hello fabianmurillo!Hello fabianmurillo!Hello fabianmurillo!Hello fabianmurillo!Hello fabianmurillo! You are 28.
