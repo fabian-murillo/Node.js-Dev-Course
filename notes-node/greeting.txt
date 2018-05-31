@@ -1,0 +1,4 @@
+/* This file was actually created using the appendFile file method
+   with the 'fs' module, in the app.js file!...I addded this note */
+
+Hello world!
