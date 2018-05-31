@@ -1,4 +1,5 @@
 /* This file was actually created using the appendFile file method
    with the 'fs' module, in the app.js file!...I addded this note */
 
+// We've now appended the os system's username utilizing the 'os' module:
 Hello world!Hello fabianmurillo!
