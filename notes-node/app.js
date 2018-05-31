@@ -8,8 +8,19 @@ smaller files, for better project structuring. */
 // fetch all the contents of the fs module & store in fs variable:
 const fs = require('fs');
 
-fs.appendFile('greeting.txt', 'Hello world!', function (err) {
+//require the 'os' module:
+const os = require('os');
+
+// grabe the user info:
+var user = os.userInfo();
+console.log(user);
+
+// We use the fs modules 'appnedFile method' to append text to a file
+// if it doesn't exist, it creates the file:
+// Now we'll use it along with the 'os' module and ES6 template string literals:
+fs.appendFile('greeting.txt', `Hello ${user.username}!`, function (err) {
     if (err) {
         console.log('Unable to write to file');
     }
 });
+
