@@ -8,7 +8,7 @@ const notes = require('./notes.js')
 
 // console.log(_.isString(true));
 // console.log(_.isString('Fabian'));
-var filteredArray = _.uniq(['Fabian, 1, Fabian, 1, 2, 3, 4']);
+var filteredArray = _.uniq(['Fabian', '1', 'Fabian', '1','2', '3', '4']);
 console.log(filteredArray);
 
 
