@@ -8,6 +8,7 @@ const notes = require('./notes.js')
 var res = notes.addNote();
 console.log(res);
 
+// Calling the function we created in notes.js for our 1st solo challenge:
 var sum = notes.add(3,2);
 console.log(sum);
 
