@@ -15,7 +15,7 @@ if (command === 'add') {
 } else if (command === 'list') {
     console.log('Listing all notes');
 } else if (command === 'read') {
-    console.log('Reading note');
+    console.log('Reading notes');
 } else if (command === 'remove') {
     console.log('Removing note');
 }else {
