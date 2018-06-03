@@ -1,3 +1,0 @@
-// We've used module.exports in our notes.js file, to make the data we've appended
-// here, available to the app.js file, through our require function:
-Hello world!Hello fabianmurillo!Hello fabianmurillo!Hello fabianmurillo!Hello fabianmurillo!Hello fabianmurillo! You are 28.

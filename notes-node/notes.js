@@ -6,7 +6,3 @@ module.exports.addNote = () => {
     return 'New note';
 }
 
-// 1st solo challenge: create and export a func that sums two #'s
-module.exports.add = (a,b) => {
-    return a + b;
-}
