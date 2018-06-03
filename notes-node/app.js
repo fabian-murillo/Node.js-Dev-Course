@@ -2,12 +2,13 @@ console.log('Starting app.js');
 
 const fs = require('fs');
 const os = require('os');
-const _ = require('lodash');
-// Using a relative path to tell node where to look for this file:
+// Using a 3rd party npm module (lodash):
+const _ = require('lodash'); // I deleted the node modules folder before pushing to github
 const notes = require('./notes.js')
 
-// console.log(_.isString(true));
-// console.log(_.isString('Fabian'));
+// Trying out some lodash functions:
+console.log(_.isString(true));
+console.log(_.isString('Fabian'));
 var filteredArray = _.uniq(['Fabian', '1', 'Fabian', '1','2', '3', '4']);
 console.log(filteredArray);
 
