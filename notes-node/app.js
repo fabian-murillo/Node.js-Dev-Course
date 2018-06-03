@@ -1,23 +1,23 @@
 const fs = require('fs');
 const _ = require('lodash')
+const yargs = require('yargs');
 
 const notes = require('./notes.js')
 
-// Accessing CL arg's app was intitialized with using process.argv: 
-console.log(process.argv); // short for arguments vector, similar to an args array
-// Grabbing the 3rd item in the arguments vector:
-var command = process.argv[2];
-// Logging it to the console:
+
+const argv = yargs.argv; // Where the yargs library stores its version of the args your app ran with
+var command = argv._[0];
 console.log('Command: ', command);
+console.log('Yargs', argv);
 
 if (command === 'add') {
-    console.log('Adding new note');
+    notes.addNote(argv.title, argv.body);
 } else if (command === 'list') {
-    console.log('Listing all notes');
+    notes.getAll();
 } else if (command === 'read') {
-    console.log('Reading notes');
+    notes.getNote(argv.title, argv.body);
 } else if (command === 'remove') {
-    console.log('Removing note');
-}else {
+    notes.removeNote(argv.title);
+} else {
     console.log('Command not recognized');
 }
