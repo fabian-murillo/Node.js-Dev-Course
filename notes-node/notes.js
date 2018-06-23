@@ -41,7 +41,9 @@ var getAll = () => {
 };
 
 var getNote = (title) => {
-    console.log('Getting note: ', title);
+    var notes = fetchNotes();
+    var filteredNotes = notes.filter((note) => note.title === title);
+    return filteredNotes[0];
 };
 
 // Fill out remove note:
@@ -56,6 +58,12 @@ var removeNote = (title) => {
 
     return notes.length !== filteredNotes.length;
 };
+
+var logNote = (note) => {
+    console.log('----')
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`)
+};
 /*
 We can define an entire obj that gets set to exports,
 in ES6, there's a shortcut for this, 
@@ -69,5 +77,6 @@ module.exports = {
     addNote,
     getAll,
     getNote,
-    removeNote
+    removeNote,
+    logNote
 };
