@@ -6,8 +6,6 @@ const notes = require('./notes.js')
 
 const argv = yargs.argv; // Where the yargs library stores its version of the args your app ran with
 var command = argv._[0];
-console.log('Command: ', command);
-console.log('Yargs', argv);
 
 if (command === 'add') {
     var note = notes.addNote(argv.title, argv.body);
@@ -18,7 +16,9 @@ if (command === 'add') {
         console.log('Note title already taken');
     }
 } else if (command === 'list') {
-    notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`Printing ${allNotes.length} note(s).`);
+    allNotes.forEach((note) => notes.logNote(note));
 } else if (command === 'read') {
     console.log('reading note');
     var note = notes.getNote(argv.title);
